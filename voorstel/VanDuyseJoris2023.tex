@@ -1,9 +1,9 @@
 \documentclass{hogent-article}
-
 \addbibresource{references.bib}
 
+
 \studyprogramme{Professionele bachelor toegepaste informatica}
-\course{Bachelors Proef}
+\course{Bachelorproef}
 \assignmenttype{Paper: Onderzoeksvoorstel}
 \academicyear{2023–2024}
 
@@ -12,7 +12,7 @@
 \author{Joris Van Duyse}
 \email{joris.vanduyse@student.hogent.be}
 
-% \projectrepo{https://github.com/JorisVanDuyseHogent/Dissertation-Proposal-WebGPU-Ai}
+\projectrepo{https://github.com/JorisVanDuyseHogent/Dissertation-Proposal-WebGPU-Ai}
 
 \specialisation{Mobile \& Enterprise development}
 \keywords{
@@ -36,7 +36,6 @@
 \begin{document}
 
 \begin{abstract}
-  Hier neem je de abstract van je onderzoeksvoorstel over.
 \end{abstract}
 
 \tableofcontents
@@ -46,24 +45,59 @@
 \section{Inleiding}%
 \label{sec:inleiding}
 
-% TODO: (fase 1) introduceer je gekozen onderwerp, formuleer de onderzoeksvraag en deelvragen. Wat is de doelstelling (is die S.M.A.R.T.?), wat zal het resultaat zijn van het onderzoek (een Proof-of-Concept, een prototype, een advies, ...)? Waarom is het nuttig om dit onderwerp te onderzoeken?
-De snelle evolutie van webtechnologieën heeft de deur geopend naar nieuwe mogelijkheden voor de uitvoering van complexe taken in de browser. 
-Binnen het domein van kunstmatige intelligentie (AI) en opensource-modellen, 
-biedt dit onderzoek een innovatieve benadering door gebruik te maken van WebGPU voor het lokaal uitvoeren 
-van AI-modellen op de browser. Deze aanpak gaat verder dan louter het verplaatsen van rekenkracht van servers naar de client-side; 
-het benadrukt ook de essentie van het aanpassen aan de huidige trend van Progressive Web Apps (PWA). 
-Tegelijkertijd biedt dit de mogelijkheid om het installatieproces van AI-modellen aanzienlijk te vereenvoudigen.
+% TODO: (fase 1) introduceer je gekozen onderwerp, formuleer de onderzoeksvraag en deelvragen. Wat is de doelstelling (is die S.M.A.R.T.?), 
+% wat zal het resultaat zijn van het onderzoek (een Proof-of-Concept, een prototype, een advies, ...)? Waarom is het nuttig om dit onderwerp te onderzoeken?
 
+Dit onderzoek verkent de grenzen van webtechnologieën door zich te richten op de integratie van opensource kunstmatige intelligentie (AI) modellen 
+met WebGPU in Progressive Web Apps (PWAs). 
+De snelle evolutie van webtechnologieën, zoals beschreven door \textcite{Shumylo2023}, 
+biedt nieuwe mogelijkheden voor het uitvoeren van complexe taken rechtstreeks in de browser.
+In het specifieke domein van AI en opensource-modellen presenteert dit onderzoek een innovatieve benadering 
+waarbij WebGPU wordt ingezet voor de lokale uitvoering van AI-modellen in de browser.
+
+\bigbreak
+
+Deze benadering gaat verder dan de traditionele verschuiving van rekenkracht van servers naar de client-side. 
+Het legt de nadruk op de adaptatie aan de hedendaagse trend van Progressive Web Apps (PWA), 
+waarmee de gebruikerservaring aanzienlijk kan worden verbeterd door de installatie van AI-modellen te vereenvoudigen. 
+Na het opzetten van de proof-of-concept zal een vergelijking plaatsvinden op het gebied van performantie tussen WebGPU en een uitvoering van een model met CUDA, 
+waarmee inzichten worden verkregen in de efficiëntie van deze benaderingen.
+
+\bigbreak
+
+Tevens richt dit onderzoek zich op de gebruiksvriendelijkheid van opensource AI-modellen binnen PWAs, 
+waarbij de combinatie van PWA en WebGPU wordt onderzocht om het installatieproces van deze modellen te stroomlijnen en toegankelijk te maken voor een breder publiek. 
+De studie omvat ook een grondige analyse van veiligheidsaspecten, waarbij de verschillen tussen WebGL en WebGPU met betrekking tot de toegang tot hardware grafische kaarten worden onderzocht. 
+Deze inzichten dragen bij aan het begrip van zowel de mogelijkheden als de beperkingen van geavanceerde webtechnologieën in het domein van AI-integratie.
 
 \section{Literatuurstudie}%
 \label{sec:literatuurstudie}
 
-% TODO: (fase 4) schrijf de literatuurstudie uit en gebruik waar gepast referenties naar de vakliteratuur.
+Als onderdeel van mijn onderzoek omtrent de integratie van opensource kunstmatige intelligentie (AI) 
+modellen met WebGPU binnen Progressive Web Apps (PWAs), 
+wordt de aanzienlijke waarde van PWAs als een moderne paradigmaverschuiving binnen webapplicaties benadrukt. 
+De PWAs, zoals gepresenteerd door \textcite{Shumylo2023}, 
+zijn zorgvuldig vormgegeven om een ervaring te bieden die vergelijkbaar is met native apps, 
+gebruikmakend van geavanceerde webtechnologieën zoals Service Workers, Web App Manifest, en Push Notifications.
+
+Deze technologische pijlers empoweren PWAs om functionaliteiten zoals offline-ondersteuning, 
+snelle laadtijden, en pushmeldingen te integreren, 
+waarmee zij een aantrekkelijke keuze worden voor gebruikers die streven naar een naadloze en betrokken mobiele interactie.
+
+In tegenstelling tot traditionele webapplicaties vertoont het PWA-concept een reeks significante voordelen, 
+waaronder versnelde laadtijden, 
+robuuste offline-ondersteuning, een ervaring die parallel loopt aan native apps, 
+grensoverschrijdende compatibiliteit, en moeiteloze ontdekbaarheid. 
+Deze eigenschappen maken PWAs bijzonder geschikt als omgeving voor de uitvoering van complexe AI-taken aan de client-zijde, 
+met de ondersteuning van WebGPU.
+
+Dit onderzoek richt zich op een grondige verkenning van de mogelijkheden om opensource AI-modellen te integreren in deze vooruitstrevende webtoepassingen, 
+met als doel de algehele gebruikerservaring te versterken en innovatieve inzichten te verschaffen binnen het domein van Mobile en Enterprise Development.
+
 
 % Refereren naar de literatuur kan met:
 % \autocite{BIBTEXKEY} -> (Auteur, jaartal)
 % \textcite{BIBTEXKEY} -> Auteur (jaartal)
-Voorbeeld van een referentie waar de auteursnaam geen onderdeel van de zin is~\autocite{Moore2002}.
 
 
 \section{Methodologie}%
@@ -71,8 +105,72 @@ Voorbeeld van een referentie waar de auteursnaam geen onderdeel van de zin is~\a
 
 % TODO: (fase 5) beschrijf in detail in welke fasen je onderzoek uiteenvalt, hoe lang elke fase duurt en wat het concrete resultaat van elke fase is. Welke onderzoekstechniek ga je toepassen om elk van je onderzoeksvragen te beantwoorden? Gebruik je hiervoor experimenten, vragenlijsten, simulaties? Je beschrijft ook al welke tools je denkt hiervoor te gebruiken of te ontwikkelen.
 
+\subsection*{Fase 1: WebGL en WebGPU}
 
-\section{Verwachte resultaten}%
+\begin{itemize}
+\item \textbf{Doelstelling}: Onderzoek naar de vershillen tussen WebGL en WebGPU
+\item \textbf{Aanpak}:
+\begin{itemize}
+\item Wat bracht WebGL en wat ontbreekt het.
+\item Wat is WebGPU en wat zijn de voordelen.
+\item Hoe kan WebGPU worden gebruikt in een PWA.
+\end{itemize}
+\item \textbf{Tijdskader}: 2 weken
+\item \textbf{Deliverable}: Een overzicht van de verschillen tussen WebGL en WebGPU.
+\end{itemize}
+
+Er wordt onderzocht in hoever WebGPU een verbetering is ten opzichte van WebGL. De performantie van beide technologieën wordt vergeleken. 
+Er wordt ook onderzocht welke technologieën er nodig zijn om WebGPU te gebruiken en hoe deze verschillen met WebGL.
+
+2 Weken
+
+\subsection*{Fase 2: WebGPU, privacy en veiligheid}
+
+\begin{itemize}
+\item \textbf{Doelstelling}: Veiligheidsrisico analyse van WebGPU
+\item \textbf{Aanpak}:
+\begin{itemize}
+\item 
+\item 
+\item 
+\end{itemize}
+\item \textbf{Tijdskader}: 2 weken
+\item \textbf{Deliverable}: Een analyse van de veiligheidsrisico's van WebGPU.
+\end{itemize}
+
+\subsection*{Fase 3: Proof of concept, Ai en WebGPU}
+
+\begin{itemize}
+\item \textbf{Doelstelling}: Ai modellen integreren in een PWA met behulp van WebGPU
+\item \textbf{Aanpak}:
+\begin{itemize}
+\item Een geschikt Ai model zoeken.
+\item Een simpele PWA opzetten.
+\item WebGPU integreren in de PWA.
+\end{itemize}
+\item \textbf{Tijdskader}: 6 weken
+\item \textbf{Deliverable}: Een proof of concept van een Ai model in een PWA met behulp van WebGPU.
+\end{itemize}
+Er wordt onderzocht in hoeverre het Whisper AI model kan geïmplementeerd worden in een PWA met behulp van WebGPU.
+
+\subsection*{Fase 4: Performantie WebGPU}
+
+\begin{itemize}
+\item \textbf{Doelstelling}: Performantie van WebGPU vergelijken met CUDA
+\item \textbf{Aanpak}:
+\begin{itemize}
+\item Proof of concept testen aan de hand van varschillende benchmark.
+\item Een CUDA implementatie van het Whisper AI model opzetten.
+\item Vergelijken van de performantie van beide implementaties.
+\end{itemize}
+\item \textbf{Tijdskader}: 2 weken
+\item \textbf{Deliverable}: Een vergelijking van de performantie van WebGPU met CUDA.
+\end{itemize}
+
+Na het uitwerken van een proof of concept kan de performantie van WebGPU vergeleken worden met alternatieve technologieën zoals CUDA.
+Er zijn namelijk meerdere AI-modellen die gebruik maken van CUDA, zoals Whisper AI van OpenAI.
+
+\section{Verwachte resultaten}
 \label{sec:verwachte-resultaten}
 
 % TODO: (fase 6) beschrijf wat je verwacht uit je onderzoek en waarom (bv. volgens je literatuuronderzoek is softwarepakket A het meest gebruikte en denk je dat het voor deze casus ook het meest geschikt zal zijn). Natuurlijk kan je niet in de toekomst kijken en mag je geen alternatieve mogelijkheden uitsluiten. In de praktijk gebeurt het ook vaak dat een onderzoek tot verrassende resultaten leidt, dat maakt het proces nog interessanter!
@@ -87,7 +185,8 @@ maar ook aan de mate waarin WebGPU een gelijkwaardige of zelfs verbeterde presta
 Het streven naar deze prestatie-equivalentie met gevestigde technologieën markeert een significante mijlpaal 
 en draagt bij aan het begrip van de mogelijkheden van WebGPU voor het uitvoeren van veeleisende AI-taken binnen webomgevingen.
 
-\section{Discussie, conclusie}%
+\section{Discussie, conclusie}
+
 \label{sec:discussie-conclusie}
 
 
@@ -98,6 +197,7 @@ en draagt bij aan het begrip van de mogelijkheden van WebGPU voor het uitvoeren 
 % bibliografie.bib voorkomen. Gebruik JabRef om je bibliografie bij te
 % houden.
 
-\printbibliography[heading=bibintoc]
+% \printbibliography[heading=bibintoc]
+\printbibliography
 
 \end{document}
